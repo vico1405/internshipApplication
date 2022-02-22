@@ -11,7 +11,7 @@ def browser_init(context):
     """
     #context.driver = webdriver.Chrome(executable_path='./chromedriver.exe')
     # context.browser = webdriver.Safari()
-    context.browser = webdriver.Firefox(executable_path='C:\\Users\\victo\\OneDrive\\Desktop\\internshipapplication1\\geckodriver.exe')
+    context.driver = webdriver.Firefox(executable_path='C:\\Users\\victo\\OneDrive\\Desktop\\internshipapplication1\\geckodriver.exe')
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
