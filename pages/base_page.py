@@ -24,21 +24,16 @@ class Page:
         assert current_text == text, f'Expected {text}, but got {current_text}'
         #assert current_text == text
 
-    def input_text(self, text, *locator):
-        self.driver.find_element(*locator).send_keys(text)
-
-
-
     def find_element(self, *locator):
         return self.driver.find_element(*locator)
 
     def find_elements(self, *locator):
         return self.driver.find_elements(*locator)
 
-    def input_text(self, text, *locator):
+    def input_iPad(self, iPad, *locator):
         e = self.driver.find_element(*locator)
         e.clear()
-        e.send_keys(text)
+        e.send_keys(iPad)
 
     def open_page(self, end_url=''):
         print(f'{self.base_url}{end_url}')

@@ -17,7 +17,7 @@ def hover_products(context):
 
 @when('Search for iPad')
 def input_ipad(context):
-    context.app.search_results_page.input_element('iPad',*SEARCH_INPUT)
+    context.app.search_results_page.input_element('iPad', *SEARCH_INPUT)
 #   context.driver.find_element(By.ID, 'woocommerce-product-search-field-0]').send_keys('iPad')
 #    context.app.search_results_page.verify_product_result(expected_text='iPad')
     context.app.search_results_page.click_element(*PRODUCT_RESULTS)

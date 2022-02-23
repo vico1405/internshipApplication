@@ -12,9 +12,9 @@ class SearchResults(Page):
         self.hover_products()
 
     def input_element(self, text, *locator):
-        self.input_text(text,*locator)
+        self.input_text(text, *locator)
 
-    def click_element(self,*locator):
+    def click_element(self, *locator):
         self.click(*locator)
 
     def verify_product_result(self):
