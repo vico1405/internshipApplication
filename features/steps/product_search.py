@@ -22,7 +22,7 @@ def input_ipad(context):
 #    context.app.search_results_page.verify_product_result(expected_text='iPad')
     context.app.search_results_page.click_element(*PRODUCT_RESULTS)
     from time import sleep
-    sleep(5)
+    sleep(7)
 
 @then('Product result for iPad are shown')
 def verify_found_results_text(context):
