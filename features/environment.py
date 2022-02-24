@@ -17,7 +17,7 @@ def browser_init(context, test_name):
     :param context: Behave context
     :param test_name: scenario.name
     """
-    #context.driver = webdriver.Chrome(executable_path='./chromedriver.exe')
+    context.driver = webdriver.Chrome(executable_path='./chromedriver.exe')
 
     #context.driver = webdriver.Firefox(executable_path='C:\\Users\\victo\\OneDrive\\Desktop\\internshipapplication1\\geckodriver.exe')
 
