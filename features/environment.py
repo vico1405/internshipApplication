@@ -5,8 +5,8 @@ from selenium.webdriver.support.events import EventFiringWebDriver
 #from support.logger import logger, MyListener
 
 # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-bs_user = ''
-bs_pw = ''
+bs_user = 'victoroluwamakin_5L8cQm'
+bs_pw = 'fyvdagmXXakGr12zNxWq'
 
 # Allure command:
 # behave -f allure_behave.formatter:AllureFormatter -o test_results/ features/tests/product_page.feature
@@ -17,8 +17,8 @@ def browser_init(context, test_name):
     :param context: Behave context
     :param test_name: scenario.name
     """
-    context.driver = webdriver.Chrome(executable_path='./chromedriver.exe')
-    # context.driver = webdriver.PhantomJS()
+    #context.driver = webdriver.Chrome(executable_path='./chromedriver.exe')
+
     #context.driver = webdriver.Firefox(executable_path='C:\\Users\\victo\\OneDrive\\Desktop\\internshipapplication1\\geckodriver.exe')
 
     # ## HEADLESS MODE ####
@@ -33,14 +33,21 @@ def browser_init(context, test_name):
     # context.driver = EventFiringWebDriver(webdriver.Chrome(chrome_options = options), MyListener())
 
     ### for browerstack ###
-    # desired_cap = {
-    #     'browser': 'Firefox',
-    #     'os': 'Windows',
-    #     'os_version': '10',
-    #     'name': test_name
-    # }
-    # url = f'http://{bs_user}:{bs_pw}@hub-cloud.browserstack.com/wd/hub'
-    # context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    desired_cap = {
+        # 'browser': 'Firefox',
+        # 'os': 'Windows',
+        # 'os_version': '10',
+        # 'name': test_name
+
+        'os_version': 'Monterey',
+        'os': 'OS X',
+        'browser': 'chrome',
+        'browser_version': '98.0',
+        'name': 'Mac Os gettop',
+        'build': 'browserstack-build-1'
+    }
+    url = f'http://{bs_user}:{bs_pw}@hub-cloud.browserstack.com/wd/hub'
+    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(5)
