@@ -33,21 +33,21 @@ def browser_init(context, test_name):
     # context.driver = EventFiringWebDriver(webdriver.Chrome(chrome_options = options), MyListener())
 
     ### for browerstack ###
-    desired_cap = {
-        # 'browser': 'Firefox',
-        # 'os': 'Windows',
-        # 'os_version': '10',
-        # 'name': test_name
-
-        'os_version': 'Monterey',
-        'os': 'OS X',
-        'browser': 'chrome',
-        'browser_version': '98.0',
-        'name': 'Mac Os gettop',
-        'build': 'browserstack-build-1'
-    }
-    url = f'http://{bs_user}:{bs_pw}@hub-cloud.browserstack.com/wd/hub'
-    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    # desired_cap = {
+    #     # 'browser': 'Firefox',
+    #     # 'os': 'Windows',
+    #     # 'os_version': '10',
+    #     # 'name': test_name
+    #
+    #     'os_version': 'Monterey',
+    #     'os': 'OS X',
+    #     'browser': 'chrome',
+    #     'browser_version': '98.0',
+    #     'name': 'Mac Os gettop',
+    #     'build': 'browserstack-build-1'
+    # }
+    # url = f'http://{bs_user}:{bs_pw}@hub-cloud.browserstack.com/wd/hub'
+    # context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(5)

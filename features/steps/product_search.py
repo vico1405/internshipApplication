@@ -28,3 +28,4 @@ def input_ipad(context):
 def verify_found_results_text(context):
     context.app.search_results_page.verify_product_result()
 
+
